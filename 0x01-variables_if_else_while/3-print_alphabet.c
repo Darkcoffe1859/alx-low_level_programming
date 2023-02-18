@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-
 /**
  * main - returns alphabets both lower and upper cases
  *
@@ -8,21 +6,22 @@
  */
 int main(void)
 {
-        int ch ='a';
-	int CH = 'A';
+        char c;
+	char d;
 
-        while (ch <= 'z')
-        {
-                putchar(ch);
-                ch++;
+	c = 'a';
+	d = 'A';
+
+        while
+             (c <= 'z') {
+		    putchar(c);
+		   c++; 
 	}
-	while (CH <= 'Z)
-	{
-		putchar(CH);
-		CH++;
-        }
-
-
-        putchar('\n');
-        return (0);
+	while 
+		(d <= 'z') {
+			putchar(c);
+			d++;
+		}
+	putchar('\n');
+	return (0)
 }
