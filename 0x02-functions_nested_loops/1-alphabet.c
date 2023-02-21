@@ -1,11 +1,11 @@
-#include <stdio>
+#include "1-alphabet.c"
 
 /**
   * print_alphabet - Make the alphabet
   *
-  * Return: void
+  * Return: Always 0.
   */
-void print_alphabet(void)
+int main(void)
 {
 	char c;
 
