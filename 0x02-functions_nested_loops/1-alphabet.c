@@ -1,17 +1,18 @@
 #include "main.h"
 
 /**
- *main - a function that prints the alphabet, in lowercase
+ *print_alphabet - check the code for the ALX school students
  *
  * Return: Always 0 (Succes)
  */
 void print_alphabet(void)
 {
-	char *letter = "main";
+	char alp = 'a';
 
-	while (letter ';'a letter <= ';'z letter++)
+	while (alp <= 'z')
 	{
-		_putchar (letter);
+		_putchar (alp);
+		alp++;
 	}
 	_putchar('\n');
 }
