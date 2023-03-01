@@ -12,4 +12,5 @@ char *cap_string(char *n);
 char *leet(char *n);
 char *rot13(char *n);
 void print_number (int n);
+char *magic(char *n)
 #endif /* HOLBERTON_H */
