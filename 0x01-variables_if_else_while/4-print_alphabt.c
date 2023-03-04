@@ -1,24 +1,25 @@
 #include <stdio.h>
-#include <unistd.h>
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - Entry point
- * Description: prints lowercase alphabets
- * Return: Always 0 (success)
+ * main - The entry point of my program
+ *
+ * Description: The program prints the alphabet in lowercase.
+ *followed by a new line.
+ *
+ * Return: Return O if there is no error in main program
  */
 int main(void)
 {
-	int ch;
+	int n = 0;
+	char alphabet[28] = "abcdefghijklmnopqrstuvwxyz";
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	while (alphabet[n] != '\0')
 	{
-		if (ch != 'e' && ch != 'q')
-		{
-			putchar(ch);
-		}
-		else
-		{
-		}
+		putchar(alphabet[n]);
+		n++;
 	}
 	putchar('\n');
+
 	return (0);
 }	
