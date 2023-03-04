@@ -14,7 +14,8 @@ int main(void)
 	int n;
 	char alphabet[28] = "abcdefghijklmnopqrstuvwxyz";
 
-	while (alphabet[n] != '\0'){
+	while (alphabet[n] != '\0')
+	{
 		putchar(alphabet[n]);
 		n++;
 	}
