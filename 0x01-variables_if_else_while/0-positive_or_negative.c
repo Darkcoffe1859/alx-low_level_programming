@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - prints if the number is positive,negative or;
- * return; Always 0
+ * main - The entry point of my program
+ *
+ * Return: Return O if there is no error in main program
  */
 int main(void)
 {
@@ -12,16 +13,11 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
-	{
 		printf("%d is positive\n", n);
-	}
-	else if (n == 0)
-	{
-		printf("%d is zero\n", n);
-	}
-	else
-	{
+	else if (n < 0)
 		printf("%d is negative\n", n);
-	}
+	else
+		printf("0 is zero\n");
+
 	return (0);
 }
