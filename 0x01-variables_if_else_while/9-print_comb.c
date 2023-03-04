@@ -1,23 +1,22 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+
 /**
- * main - The entry point of my program
+ * main - print possible combination 0-9
  *
- * Description: The program prints all single digit numbers
- * of base 10 starting from 0, followed by a new line.
- *
- * Return: Return O if there is no error in main program
+ * Return: zero
  */
 int main(void)
 {
-	int n = 0;
+	int i;
 
-	for (n = '0'; n <= '9'; n++)
+	for (i = '0'; i <= '9'; i++)
 	{
-		putchar((char) n);
+		putchar(i);
+		if (i == '9')
+			break;
+		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
-
 	return (0);
 }
