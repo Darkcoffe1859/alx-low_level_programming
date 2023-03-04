@@ -1,35 +1,33 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of three different digits,
- *        in ascending order, separated by a comma followed by a space.
+ *main - Prints combinations of decimal digits using only putchar
  *
- * Return: Always 0.
+ *Description: Prints combinations of decimal digits using only putchar
+ *Return: 0
  */
 int main(void)
 {
-	int digit1, digit2, digit3;
+	int digit_one = 0;
+	int digit_two = 0;
 
-	for (digit1 = 0; digit1 < 8; digit1++)
+	for (digit_one = 48; digit_one <= 57; digit_one++)
 	{
-		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
+		for (digit_two = digit_one + 1; digit_two <= 57; digit_two++)
 		{
-			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
+			for (digit_three = digit_two + 1; digit_three <= 57; digit_three++)
 			{
-				putchar((digit1 % 10) + '0');
-				putchar((digit2 % 10) + '0');
-				putchar((digit3 % 10) + '0');
-
-				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
-					continue;
-				
-				putchar(',');
-				putchar(' ');
+				putchar(digit_one);
+				putchar(digit_two);
+				putchar(digit_three);
+				if (!((digit_one == 55 && digit_two == 56) && digit_three == 57))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }
