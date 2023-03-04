@@ -1,25 +1,22 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+
 /**
- * main - The entry point of my program
+ * main - print alphabet except q and e
  *
- * Description: The program prints the alphabet in lowercase.
- *followed by a new line.
- *
- * Return: Return O if there is no error in main program
+ * Return: zero
  */
 int main(void)
 {
-	int n = 0;
-	char alphabet[28] = "abcdefghijklmnopqrstuvwxyz";
+	char ch;
 
-	while (alphabet[n] != '\0')
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(alphabet[n]);
-		n++;
+		if (ch == 'e' || ch == 'q')
+		{
+			continue;
+		}
+		putchar(ch);
 	}
 	putchar('\n');
-
 	return (0);
 }	
