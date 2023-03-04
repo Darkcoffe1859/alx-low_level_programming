@@ -1,21 +1,20 @@
 #include <stdio.h>
-
 /**
- * main - prints out the alphabet in lowercase except for 'qe'
- *
- * Return (0)
+ * main - A program that prints all the alphabets except e and q
+ * followed by new line.
+ * Return: alway 0
  */
-
 int main(void)
 {
-	char c;
+	char alpha;
 
-	for (c = 'a'; c <= 'z'; c++)
-
-	if (c != 'e' && c != 'q')
-		putchar(c);
-
+	for (alpha = 'a'; alpha <= 'z'; alpha++)
+	{
+		if (alpha != 'e' && alpha != 'q')
+		{
+			putchar(alpha);
+		}
+	}
 	putchar('\n');
-
 	return (0);
 }	
