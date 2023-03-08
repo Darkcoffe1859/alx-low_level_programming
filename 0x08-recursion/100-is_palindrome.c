@@ -1,57 +1,46 @@
-#include "holberton.h"
-
-int check_palindrome(char *s);
-
+#include "main.h"
 /**
-  * is_palindrome - Returns if a string is palindrome
-  * @s: the string value to be checked
-  *
-  * Return: integer value
-  */
+*longitud - function that returns the power of number
+*@s: string
+*
+*Return: length of a string
+*/
+int longitud(char *s)
+{
+	int l = 0;
+
+	if (*s != '\0')
+	{
+		l++;
+		return (longitud(s + 1) + l);
+	}
+	return (l);
+}
+/**
+ *comparar - function that returns the power of number
+ *@i: original number
+ *@l: counter to compare multiplication
+ *@s: string
+ *Return: square root
+ */
+int comparar(int i, int l, char *s)
+{
+	if (i >= l)
+		return (1);
+	else if (s[i] == s[l])
+		return (comparar(i + 1, l - 1, s));
+	else
+		return (0);
+}
+/**
+ *is_palindrome - return 1 if is number prime
+ *@s: number to evaluate
+ *Return: 1 or 0
+ */
 int is_palindrome(char *s)
 {
-	if (*s == '0')
-		return (1);
+	int l = longitud(s);
+	int i = 0;
 
-	return (check_palindrome(s));
-}
-
-/**
-  * check_palindrome - Check if a string is palindrome
-  * @s: the string value to be checked
-  *
-  * Return: integer value
-  */
-int check_palindrome(char *s)
-{
-	int l = _strlen_recursion(s) - 1;
-
-	if (*s == s[l])
-	{
-		s++;
-		l--;
-	}
-	else
-	{
-		return (0);
-	}
-
-	return (1);
-}
-
-/**
-  * _strlen_recursion - Get the length of a string
-  * @s: the string to get the length
-  *
-  * Return: the string length
-  */
-int _strlen_recursion(char *s)
-{
-	if (*s == '\0')
-	{
-		return (0);
-	}
-
-	s++;
-	return (_strlen_recursion(s) + 1);
+	return (comparar(i, l - 1, s));
 }
