@@ -1,13 +1,14 @@
 #include <stdlib.h>
 #include "main.h"
+
 /**
- * main - A function that concentrates two strings
- * @s1: size of string to concentrates
- * @s2: other size of string to concentrates
+ * *str_concat - concatenates two strings
+ * @s1: string to concatenate
+ * @s2: other string to concatenate
  *
  * Return: pointer to the new string created (Success), or NULL (Error)
  */
-char *str_concat (char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	char *s3;
 	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
