@@ -5,19 +5,24 @@
  * add_nodeint - print a function that adds a new node at the beginning
  * @n: nodes int the listint_t
  * @head: the first node of list
- * Return: The address of the new element, or null if failed
+ * Return: The address of the new element, or null 
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *newhead = malloc(sizeof(listint_t));
+	listint_t *newnode;
 
-	if (new_head == NULL)
+	if (head == NULL)
+	newnode = *head;
+	newnode = malloc(sizeof(listint_t));
+
+	if (newnode == NULL)
 
 		return (NULL);
 
-	new_head->n = n;
-	new_head->next = *head;
-	*head = new_head;
-	return (new_head);
+	newnode->n = n;
+	newnode->next = *head;
+	*head = newnode;
+
+	return (newnode);
 }
 
