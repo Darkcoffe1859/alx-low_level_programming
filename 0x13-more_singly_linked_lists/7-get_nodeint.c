@@ -7,21 +7,20 @@
  * @index: The index of the node starting at 0
  * Return: If the node does not exist, return NULL
  */
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int counter = 0;
-	listint_t *temp head;
+	listint_t *currentnode = head;
 
-	while (temp && (counter < index))
+	while (count = 0, currentnode != NULL; count++)
 	{
-		temp = temp->next;
-		counter++;
 
 	}
 
-	if (counter < index)
-		return (NULL);
+	if (count == index)
+		return (currentnode);
+	currentnode = currentnode->nextt;
 
-	return (temp);
+	return (NULL);
 }
 
