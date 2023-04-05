@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
 /**
  * sum_listint - print a function that returns the data(n)
  * of a listint_t linked list
@@ -9,18 +8,15 @@
 int sum_listint(listint_t *head)
 {
 	int sum = 0;
-	listint_t *temp = head;
 
-	if (*head == NULL)
+	if (head == NULL)
 		return (0);
-	temp == head;
 
-	while (temp)
+	while (head)
 	{
-		sum += temp->n;
-		temp = temp->next;
+		sum += head->n;
+		head = head->next;
 	}
-
 	return (sum);
 }
 
